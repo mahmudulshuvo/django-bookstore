@@ -8,9 +8,11 @@
         <h1 class="text-center text-4xl">Prgoramming Books</h1>
         <div class="grid grid-cols-4 gap-4">
             {% for book in books %}
-                <div class="justify-self-center mt-10">
-                    <h3>{{book.title}}</h3>
-                    <img src="{{book.thumbnailUrl}}" width="100" height="150" />
+                <div class="justify-self-center text-center my-4">
+                    <p>{{book.title}}</p>
+                    <a href="/books/{{book.id}}" target="_blank">
+                        <img src="{{book.thumbnailUrl}}" width="200" />
+                    </a>
                 </div>
             {% endfor %}
         </div>
